@@ -27,8 +27,9 @@ node_modules/react-native/flow/
 [options]
 emoji=true
 
-esproposal.optional_chaining=enable
-esproposal.nullish_coalescing=enable
+; Remove unsupported options
+; esproposal.optional_chaining=enable
+; esproposal.nullish_coalescing=enable
 
 module.file_ext=.js
 module.file_ext=.json
@@ -45,9 +46,9 @@ suppress_type=$FlowFixMe
 suppress_type=$FlowFixMeProps
 suppress_type=$FlowFixMeState
 
-suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(<VERSION>\\)? *\\(site=[a-z,_]*react_native\\(_ios\\)?_\\(oss\\|fb\\)[a-z,_]*\\)?)\\)
-suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(<VERSION>\\)? *\\(site=[a-z,_]*react_native\\(_ios\\)?_\\(oss\\|fb\\)[a-z,_]*\\)?)\\)?:? #[0-9]+
-suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
+; suppress_comment=\\(.\\|\n\\)*\\$FlowFixMe\\($\\|[^(]\\|(\\(<VERSION>\\)? *\\(site=[a-z,_]*react_native\\(_ios\\)?_\\(oss\\|fb\\)[a-z,_]*\\)?)\\)
+; suppress_comment=\\(.\\|\n\\)*\\$FlowIssue\\((\\(<VERSION>\\)? *\\(site=[a-z,_]*react_native\\(_ios\\)?_\\(oss\\|fb\\)[a-z,_]*\\)?)\\)?:? #[0-9]+
+; suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
 
 [lints]
 sketchy-null-number=warn
@@ -57,10 +58,11 @@ untyped-type-import=warn
 nonstrict-import=warn
 deprecated-type=warn
 unsafe-getters-setters=warn
-inexact-spread=warn
 unnecessary-invariant=warn
-signature-verification-failure=warn
-deprecated-utility=error
+; Remove invalid lint rules
+; inexact-spread=warn
+; signature-verification-failure=warn
+; deprecated-utility=error
 
 [strict]
 deprecated-type
@@ -72,4 +74,4 @@ untyped-import
 untyped-type-import
 
 [version]
-^0.105.0
+^0.223.3
